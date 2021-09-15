@@ -1,0 +1,36 @@
+﻿using System;
+
+namespace RandomNumberGenerators
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random rnd = new Random();
+            int myRandomNumber = rnd.Next(1, 11);//numbrid 1kuni 10
+            Console.WriteLine($"Sinu juhuslik number on {myRandomNumber}");
+            //programm kontrollib, kas genereeritud number on suurem kui 5
+            //kui genereeritud number on suurem, kui 5,programm kuvab
+            //"juhuslik number on{myRanomNumber},see on suurem kui 5"
+            //kui genereeritud number väiksem, kui 5, siis programm kuvab
+            //"juhuslik number on {myRandomNumber},see väiksem kui 5"
+            //kui genereeritud number on 5,programm kuvab
+            //"juhuslik number on 5"
+            //< - väiksem kui, > -suurem kui, == - võrdne
+
+            if (myRandomNumber  < 5 )
+            { 
+                Console.WriteLine("Väiksem kui 5");
+            }
+            else if (myRandomNumber > 5)
+            {
+                Console.WriteLine("Suurem kui 5");
+            }
+            
+            else 
+            {
+                Console.WriteLine("Juhuslik number on 5");
+            }
+        }
+    }
+}
